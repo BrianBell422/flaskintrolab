@@ -3,12 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <title>{{title}} - Your Order</title>
 </head>
-<body>
-  <h1>Your Order</h1>
-    <p>
-      {{order.customer_name}}: {{order.order_date}}: {{order.book_title}}, {{order.quantity}}, {{order.value}}
-    </p>
+<body class='grids'>
+  
+  <div id='container'>
+    <h1>Your Order</h1>
+    <div id="order-grid">
+        <div id="name">
+        <h3>{{order.customer_name}}</h3>
+        </div>
+        <div id='date'>
+        <h3>{{order.order_date}}</h3>
+        </div>
+        <div id='book'>
+        {{order.book_title}}
+        </div>
+        <div id='quantity'>
+        {{order.quantity}}
+        </div>
+        <footer>
+        {{order.value}}
+        </footer> 
+    </div>
+  </div>
 </body>
 </html>

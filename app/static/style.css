@@ -1,0 +1,45 @@
+.grids {
+    
+    /* text-align: center; */
+   
+}
+
+ #container {
+    width: 30vw;
+    background-color: salmon;
+} 
+
+#order-grid {
+    display: grid;
+    justify-content: center;
+    text-align: right;
+    grid-template-areas: 
+    "name date"
+    "book quantity"
+    "value value";
+    width: fit-content;
+    border: black solid 2px;
+}
+
+#name {
+    grid-area: name;
+    text-align: left;
+}
+
+#date {
+    grid-area: date;
+}
+
+#book {
+    grid-area: book;
+    text-align: left;
+}
+
+#quantity {
+    grid-area: quantity;
+}
+
+footer {
+    grid-area: value;
+
+}

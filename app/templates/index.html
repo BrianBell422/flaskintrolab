@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <title>{{title}} - My Order List</title>
 </head>
-<body>
+<body class='grids'>
   <h1>My Order List!</h1>
   {% for order in orders_list %}
-    <div>
         <p>
             {{order.customer_name}}: {{order.order_date}}: {{order.book_title}}, {{order.quantity}}, {{order.value}}
         </p>
